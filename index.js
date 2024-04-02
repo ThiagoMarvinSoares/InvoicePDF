@@ -1,5 +1,42 @@
+import { log } from 'console';
 import fs from 'fs';
 import PDFDocument from 'pdfkit';
+
+
+
+
+///////////////////////////////////////TESTING FEATURE
+import express from 'express';
+import bodyParser from 'body-parser';
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/generate-pdf', (req, res) => {
+    // Aqui você pega os dados do formulário
+    const { produto, marcaVeiculo, modelo, placa, periodoGarantia, dataIsnt, nomeCliente, telefoneCliente, emailCliente } = req.body;
+
+    const doc = new PDFDocument({ size: 'A4' });
+    doc.pipe(fs.createWriteStream('nomedocliente.pdf'));
+
+    // Use os dados do formulário para preencher o PDF
+    doc.fontSize(12);
+    doc.text(`Produto: ${produto}`, 50, 50);
+    // Adicione mais linhas conforme necessário...
+
+    doc.end();
+
+    // Enviar o PDF gerado como resposta
+    res.setHeader('Content-Disposition', 'attachment; filename=nomedocliente.pdf');
+    res.setHeader('Content-type', 'application/pdf');
+    doc.pipe(res);
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+///////////////////////////////////TESTING FEATURE
 
 const doc = new PDFDocument({ size: 'A4' });
 
@@ -118,5 +155,6 @@ doc.fillColor('black') // Cor do texto
      width: rectWidth - 20, // Largura do texto (levando em conta a margem)
      align: 'left' // Alinhamento do texto
    });
+    
 
 doc.end();
