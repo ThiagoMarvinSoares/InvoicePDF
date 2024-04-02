@@ -2,7 +2,7 @@
   "name": "pdfmaker",
   "version": "1.0.0",
   "description": "",
-  "type" : "module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,8 @@
   "author": "Thiago Marvin",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
     "pdfkit": "^0.15.0"
   }
 }

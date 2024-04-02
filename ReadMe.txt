@@ -6,7 +6,6 @@ This repository contains a simple invoice maker specifically designed for compan
 
 - Generate professional-looking invoices for automotive window film services.
 - Customizable invoice template to include company logo, details, and service descriptions.
-- Automatic calculation of total cost based on services rendered.
 - Easy to use and integrate into existing systems.
 
 ## Installation
