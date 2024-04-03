@@ -3,47 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Garantia Casarão das películas</title>
 </head>
 <body>
-    <h1>Invoice Form</h1>
-    <form id="invoiceForm" action="http://localhost:3000/generate-pdf" method="post">
-      <label for="produto">Produto:</label>
-      <input type="text" id="produto" name="produto"><br><br>
-  
-      <label for="marcaVeiculo">Marca do veículo:</label>
-      <input type="text" id="marcaVeiculo" name="marcaVeiculo"><br><br>
-  
-      <label for="modelo">Modelo:</label>
-      <input type="text" id="modelo" name="modelo"><br><br>
-  
-      <label for="placa">Placa:</label>
-      <input type="text" id="placa" name="placa"><br><br>
-  
-      <label for="periodoGarantia">Período de garantia:</label>
-      <input type="text" id="periodoGarantia" name="periodoGarantia"><br><br>
-  
-      <label for="dataIsnt">Data:</label>
-      <input type="text" id="dataIsnt" name="dataIsnt"><br><br>
-  
-      <label for="h2Title">Título (H2):</label>
-      <input type="text" id="h2Title" name="h2Title"><br><br>
-  
-      <label for="nomeCliente">Nome do Cliente:</label>
-      <input type="text" id="nomeCliente" name="nomeCliente"><br><br>
-  
-      <label for="telefoneCliente">Telefone do Cliente:</label>
-      <input type="text" id="telefoneCliente" name="telefoneCliente"><br><br>
-  
-      <label for="emailCliente">Email do Cliente:</label>
-      <input type="text" id="emailCliente" name="emailCliente"><br><br>
-  
-      <label for="numeroGarantia">Número da Garantia:</label>
-      <input type="text" id="numeroGarantia" name="numeroGarantia"><br><br>
-  
-      <input type="submit" value="Generate Invoice">
-    </form>
+  <div class="header">
+    <img src="CasarãoHeader.jpg" alt="">
+  </div>
+    <h2>Gerador de garantia</h2>
+    <div class="formWrap">
+      
+      <form id="invoiceForm" action="http://localhost:3000/generate-pdf" method="post">
+        <div class="group">
+          <div class="firstGroupChild">
+            <label for="produto">Produto:</label>
+            <input type="text" class="fields" placeholder="Ex: Pelicula 3M" maxlength="23" id="produto" name="produto">
+          </div>
 
+          <div class="firstGroupChild">
+            <label for="marcaVeiculo">Marca do veículo:</label>
+            <input type="text" class="fields" placeholder="Ex: Toyota" maxlength="19" id="marcaVeiculo" name="marcaVeiculo">
+          </div>
+
+          <div class="firstGroupChild">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="fields" placeholder="Ex: Corola" maxlength="19" id="modelo" name="modelo">
+          </div>  
+        </div>
+
+        <div class="group">
+          <div  class="secondGroupChild"> 
+            <label for="placa">Placa:</label>
+            <input type="text" class="fields" placeholder="Ex: ABCD-1234" maxlength="11" id="placa" name="placa">
+          </div>
+          <div class="secondGroupChild">
+            <label for="periodoGarantia">Período de garantia:</label>
+            <input type="text" class="fields" placeholder="Ex: 12 meses" maxlength="12" id="periodoGarantia" name="periodoGarantia">
+          </div>
+          <div class="secondGroupChild"> 
+            <label for="dataIsnt">Data:</label>
+            <input type="text" class="fields" placeholder="Ex: 01/01/2024" maxlength="10" id="dataIsnt" name="dataIsnt">
+          </div>
+        </div>
+
+          <h2>Dados do cliente</h2>
+          <div class="group">
+            <div class="thirdGroupChild">
+              <label for="nomeCliente">Nome do Cliente:</label>
+              <input type="text" class="fields" maxlength="25" id="nomeCliente" name="nomeCliente">
+            </div>
+            <div class="thirdGroupChild">
+              <label for="telefoneCliente">Telefone do Cliente:</label>
+              <input type="text" class="fields" maxlength="19" id="telefoneCliente" name="telefoneCliente">
+            </div>
+  
+            <div class="thirdGroupChild">
+              <label for="emailCliente">Email do Cliente:</label>
+              <input type="text" class="fields" maxlength="25" id="emailCliente" name="emailCliente">
+            </div>
+          </div>
+
+          <div class="buttonWrap">
+            <button  id="heroBtn" type="submit" value="Generate Invoice">GERAR PDF</button>
+          </div>
+        
+      </form>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
