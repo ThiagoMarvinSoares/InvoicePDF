@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #353535;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 50%;
+}
+
+.fields {
+    border-radius: 4px;
+    padding: 8px 4px;
+    width: 250px;
+    margin: 10px 0;
+    border: none;
+    align-items: flex-end;
+}
+
+.group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+}
+
+.firstGroupChild {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.secondGroupChild {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.thirdGroupChild {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#id {
+    border-radius: 4px;
+    border: none;
+    margin: 5px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 10px 0;
+    color: #dd2e38;
+    font-size: 40px;
+}
+
+.formWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttonWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+button:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
