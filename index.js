@@ -15,7 +15,6 @@ const rectX = 50; // Posição X do retângulo
 const rectY = 610; // Posição Y do retângulo
 const rectWidth = 495.28; // Largura do retângulo (largura da página A4 - margens)
 const rectHeight = 160; // Altura do retângulo
-let numeroGarantia = 202400001;
 
 
 ///Generate PDF
