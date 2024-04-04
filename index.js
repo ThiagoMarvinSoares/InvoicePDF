@@ -1,4 +1,3 @@
-import { log } from 'console';
 import fs from 'fs';
 import PDFDocument from 'pdfkit';
 import express from 'express';
