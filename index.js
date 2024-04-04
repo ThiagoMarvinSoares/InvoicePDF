@@ -95,7 +95,3 @@ app.post('/generate-pdf', (req, res) => {
     res.setHeader('Content-type', 'application/pdf');
     doc.pipe(res);
 });
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
