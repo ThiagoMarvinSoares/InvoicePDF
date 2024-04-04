@@ -17,6 +17,9 @@ const rectWidth = 495.28; // Largura do retângulo (largura da página A4 - marg
 const rectHeight = 160; // Altura do retângulo
 let numeroGarantia = 202400001;
 
+
+///Generate PDF
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -30,7 +33,6 @@ app.post('/generate-pdf', (req, res) => {
    
 
     const doc = new PDFDocument({ size: 'A4' });
-    doc.pipe(fs.createWriteStream(`${nomeCliente}.pdf`));
     doc.fontSize(12);
 
     doc.image('CasarãoHeader.jpg', 0, 0, { width: 595.28 });
