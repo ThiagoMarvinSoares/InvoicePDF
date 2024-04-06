@@ -89,9 +89,16 @@ app.post('/generate-pdf', (req, res) => {
    });
  
     doc.end();
+    
 
     // Enviar o PDF gerado como resposta
     res.setHeader('Content-Disposition', `attachment; filename=${nomeCliente}.pdf`);
     res.setHeader('Content-type', 'application/pdf');
     doc.pipe(res);
+});
+
+const port = process.env.PORT || 3000; //
+
+const server = app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
