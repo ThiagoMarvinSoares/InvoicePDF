@@ -2,6 +2,7 @@
   import PDFDocument from 'pdfkit';
   import express from 'express';
   import bodyParser from 'body-parser';
+  const port = process.env.PORT || 10000;
 
   const lorem = 'Parabéns por adquirir um produto de excelente qualidade! É com grande satisfação que o Casarão das Películas lhe dá as boas-vindas à nossa família de clientes. Agradecemos por escolher nossos serviços e temos o prazer de informar que a garantia da sua película já está confirmada.Estamos comprometidos em oferecer não apenas produtos de alta qualidade, mas também um atendimento ao cliente excepcional. Se tiver alguma dúvida ou precisar de assistência adicional, não hesite em entrar em contato conosco. Obrigado por confiar no Casarão das Películas. Estamos ansiosos para servi-lo novamente no futuro.';
   const h1Title = 'Dados da instalação';
@@ -96,6 +97,6 @@
       doc.pipe(res);
   });
 
-  app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
