@@ -22,6 +22,10 @@
   const app = express();
   app.use(bodyParser.urlencoded({ extended: true }));
 
+  app.get('/', (req, res) => {
+    res.send('Aplicação rodando!');
+  });
+
   app.post('/generate-pdf', (req, res) => {
       // Aqui você pega os dados do formulário
       let numeroGarantia = parseInt(fs.readFileSync('numeroGarantia.txt', 'utf8'));
