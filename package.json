@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "tsc"
   },
   "author": "Thiago Marvin",
   "license": "ISC",
